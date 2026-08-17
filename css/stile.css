@@ -30,7 +30,7 @@ body {
 .header {
 
     width:100%;
-    padding:20px 7%;
+    padding:18px 7%;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -44,8 +44,8 @@ body {
 
 .logo img {
 
-    width:90px;
-
+    width:240px;
+    height:auto;
 }
 
 
@@ -606,7 +606,9 @@ footer p {
 
 
 @media(max-width:900px){
-
+.logo img {
+    width:190px;
+}
 
 
 .header {
