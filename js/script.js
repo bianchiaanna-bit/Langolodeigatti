@@ -41,13 +41,17 @@ if(hamburger && menu){
 
     linkMenu.forEach(function(link){
 
+
         link.addEventListener("click", function(){
+
 
             menu.classList.remove("active");
 
             hamburger.innerHTML="☰";
 
+
         });
+
 
     });
 
@@ -124,20 +128,17 @@ const heroImage = document.querySelector(".hero-image");
 if(heroImage){
 
 
-
-window.addEventListener("scroll", function(){
-
+    window.addEventListener("scroll", function(){
 
 
-    let movimento = window.scrollY * 0.18;
+        let movimento = window.scrollY * 0.18;
 
 
-    heroImage.style.transform =
-    "translateY(" + movimento + "px)";
+        heroImage.style.transform =
+        "translateY(" + movimento + "px)";
 
 
-});
-
+    });
 
 
 }
@@ -148,7 +149,7 @@ window.addEventListener("scroll", function(){
 
 
 /* ==========================
-   ANIMAZIONE ICONE FUTURA
+   ANIMAZIONE ICONE
 ========================== */
 
 
@@ -179,6 +180,115 @@ icone.forEach(function(icona){
 
 });
 
+
+
+
+
+
+/* ==========================
+   PALLINI CAROSELLO MOBILE
+========================== */
+
+
+const gallerie = document.querySelectorAll(".portfolio");
+
+
+gallerie.forEach(function(gallery){
+
+
+    const contenitoreDots = gallery.parentElement.querySelector(".mobile-dots");
+
+
+    if(!contenitoreDots) return;
+
+
+
+    const immagini = gallery.querySelectorAll("img");
+
+
+
+    // crea automaticamente un pallino per ogni immagine
+
+    immagini.forEach(function(){
+
+
+        const dot = document.createElement("span");
+
+        contenitoreDots.appendChild(dot);
+
+
+    });
+
+
+
+    const dots = contenitoreDots.querySelectorAll("span");
+
+
+
+    // primo pallino attivo
+
+    if(dots[0]){
+
+        dots[0].classList.add("active");
+
+    }
+
+
+
+    gallery.addEventListener("scroll", function(){
+
+
+
+        let immagine = gallery.querySelector("img");
+
+
+        if(!immagine) return;
+
+
+
+        let distanza = immagine.offsetWidth + 20;
+
+
+
+        let indice = Math.round(
+            gallery.scrollLeft / distanza
+        );
+
+
+
+        if(indice >= dots.length){
+
+            indice = dots.length - 1;
+
+        }
+
+
+
+        dots.forEach(function(dot){
+
+
+            dot.classList.remove("active");
+
+
+        });
+
+
+
+        if(dots[indice]){
+
+
+            dots[indice].classList.add("active");
+
+
+        }
+
+
+
+    });
+
+
+
+});
 
 
 });
