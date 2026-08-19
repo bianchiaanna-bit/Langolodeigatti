@@ -214,13 +214,28 @@ body {
 
 
 
-.hero p {
+.hero-description {
 
-    font-size:18px;
+    font-size:20px;
+    line-height:1.6;
+    color:white;
+    max-width:600px;
+    margin-top:25px;
 
 }
 
 
+
+.hero-details {
+
+    font-size:16px;
+    line-height:1.6;
+    color:rgba(255,255,255,0.85);
+    max-width:560px;
+    margin-top:15px;
+    text-shadow:0 2px 8px rgba(0,0,0,0.45);
+
+}
 
 
 
@@ -316,16 +331,15 @@ body {
 
 .section-title h2,
 .about-text h2,
-.cta h2 {
+.cta h2,
+.story-text h2 {
 
     font-family:'Cormorant Garamond',serif;
-
     font-size:42px;
-
     font-weight:600;
+    line-height:1.1;
 
 }
-
 
 
 
@@ -402,6 +416,59 @@ body {
     object-fit:contain;
 
 }
+
+
+
+/* ==========================
+   VALORE SU MISURA
+========================== */
+
+
+.value-section {
+
+    padding:45px 8% 35px;
+
+    text-align:center;
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+
+.value-section h2 {
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:42px;
+
+    font-weight:600;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.value-section p:not(.small-title) {
+
+    margin-bottom:18px;
+
+    line-height:1.7;
+
+}
+
+
+.custom {
+
+    padding:80px 8% 60px;
+
+}
+
+
 /* ==========================
    GALLERIA
 ========================== */
@@ -442,11 +509,6 @@ body {
     transform:scale(1.04);
 
 }
-
-
-
-
-
 /* ==========================
    ABOUT
 ========================== */
@@ -474,13 +536,15 @@ body {
 
     border-radius:25px;
 
+    transition:.45s ease;
+
 }
 
 
 
-.about-text p {
+.about-image img:hover {
 
-    margin:20px 0;
+    transform:scale(1.03);
 
 }
 
@@ -610,6 +674,16 @@ footer p {
 
     text-align:center;
 
+    transition:.4s ease;
+
+}
+
+
+
+.review-card:hover {
+
+    transform:translateY(-8px);
+
 }
 
 
@@ -634,6 +708,7 @@ footer p {
 
 }
 
+
 .reviews-button {
 
     text-align:center;
@@ -641,6 +716,8 @@ footer p {
     margin-top:50px;
 
 }
+
+
 
 .reviews-button .button {
 
@@ -703,6 +780,10 @@ footer p {
 
     text-align:center;
 
+    padding-top:70px;
+
+    padding-bottom:70px;
+
 }
 
 
@@ -734,6 +815,87 @@ footer p {
 .mobile-hint {
 
     display:none;
+
+}
+
+
+
+
+
+/* ==========================
+   STORY SECTION
+========================== */
+
+
+.story-section {
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    padding:100px 8%;
+
+    align-items:center;
+
+}
+
+
+
+.story-image img {
+
+    width:100%;
+
+    max-width:450px;
+
+    border-radius:25px;
+
+    transition:.45s ease;
+
+}
+
+
+
+.story-image img:hover {
+
+    transform:scale(1.03);
+
+}
+
+
+
+.story-image {
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+
+.story-text h2 {
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:48px;
+
+    font-weight:600;
+
+    line-height:1.1;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.story-text p {
+
+    margin-bottom:18px;
+
+    line-height:1.7;
 
 }
 
@@ -785,7 +947,6 @@ footer p {
 
     background:#f7f1e8;
 
-
     display:flex;
 
     flex-direction:column;
@@ -795,7 +956,6 @@ footer p {
     padding:30px 0;
 
     gap:25px;
-
 
     opacity:0;
 
@@ -840,11 +1000,15 @@ footer p {
 
 }
 
+
+
 .hero {
 
     height:75vh;
 
 }
+
+
 
 
 
@@ -866,19 +1030,47 @@ footer p {
 
 }
 
-.mobile-hint {
 
-    display:block;
 
-    margin-top:20px;
 
-    margin-bottom:25px;
 
-    font-size:15px;
+.story-section {
 
-    color:#80603e;
+    grid-template-columns:1fr;
+
+    padding:40px 8%;
+
+    gap:20px;
 
 }
+
+
+
+.story-image img {
+
+    max-height:280px;
+
+    object-fit:cover;
+
+}
+
+
+
+.story-text {
+
+    text-align:center;
+
+}
+
+
+
+.story-text h2 {
+
+    font-size:36px;
+
+}
+
+
 
 
 
@@ -889,34 +1081,52 @@ footer p {
 }
 
 
+
 .card {
 
     padding:30px 25px;
 
 }
 
+
+
+
+
 .icon {
 
     width:65px;
+
     height:65px;
+
     margin:0 auto 15px;
 
 }
 
+
+
 .icon img {
 
     width:55px;
+
     height:55px;
 
 }
 
-.about-text .button {
 
-    display:block;
 
-    width:max-content;
 
-    margin:35px auto 0;
+
+.value-section {
+
+    padding:45px 8% 35px;
+
+}
+
+
+
+.value-section h2 {
+
+    font-size:36px;
 
 }
 
@@ -928,7 +1138,7 @@ footer p {
 
     text-align:center;
 
-    padding-top:35px;
+    padding-top:50px;
 
     padding-bottom:35px;
 
@@ -936,21 +1146,6 @@ footer p {
 
 
 
-
-
-.projects > .button {
-
-    display:inline-block;
-
-    margin-top:25px;
-
-}
-
-
-
-
-
-/* CAROSELLO MOBILE */
 
 
 .portfolio {
@@ -1005,20 +1200,6 @@ footer p {
 
 
 
-.gallery {
-
-    margin-top:35px;
-
-}
-
-
-
-
-
-
-/* PALLINI */
-
-
 .mobile-dots {
 
     display:flex;
@@ -1063,9 +1244,6 @@ footer p {
 
 
 
-/* ABOUT MOBILE */
-
-
 .about-preview {
 
     grid-template-columns:1fr;
@@ -1076,9 +1254,6 @@ footer p {
 
 
 
-
-
-/* RECENSIONI MOBILE */
 
 
 .reviews-grid {
@@ -1100,11 +1275,6 @@ footer p {
 
 
 }
-
-
-
-
-
 /* ==========================
    SOCIAL FOOTER
 ========================== */
@@ -1117,14 +1287,35 @@ footer p {
 }
 
 
-
-.social p {
+.social-title {
 
     font-family:'Cormorant Garamond',serif;
 
     font-size:28px;
 
-    margin-bottom:15px;
+    font-weight:600;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.social-text {
+
+    font-family:'Lato',sans-serif;
+
+    font-size:13px;
+
+    font-weight:400;
+
+    max-width:450px;
+
+    margin:0 auto 15px;
+
+    line-height:1.4;
+
+    color:#80603e;
 
 }
 
@@ -1154,7 +1345,7 @@ footer p {
 
     text-decoration:none;
 
-    transition:.3s;
+    transition:.3s ease;
 
 }
 

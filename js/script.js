@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(){
 
 
+
 /* ==========================
    MENU MOBILE
 ========================== */
@@ -33,8 +34,6 @@ if(hamburger && menu){
     });
 
 
-
-    // chiude menu dopo click su una voce
 
     const linkMenu = document.querySelectorAll(".menu a");
 
@@ -69,7 +68,10 @@ if(hamburger && menu){
 ========================== */
 
 
-const elementi = document.querySelectorAll(".reveal");
+const elementiAnimati = document.querySelectorAll(
+".reveal, .value-section, .projects, .section-title, .story-text, .about-preview, .cta, .gallery img, .portfolio img"
+);
+
 
 
 const osservatore = new IntersectionObserver(function(entries){
@@ -82,6 +84,11 @@ const osservatore = new IntersectionObserver(function(entries){
 
 
             entry.target.classList.add("visible");
+
+
+            // evita controlli inutili
+
+            osservatore.unobserve(entry.target);
 
 
         }
@@ -101,13 +108,27 @@ const osservatore = new IntersectionObserver(function(entries){
 
 
 
-elementi.forEach(function(elemento){
+elementiAnimati.forEach(function(elemento, indice){
+
+
+    // ritardo leggero per immagini
+
+    if(
+        elemento.tagName === "IMG"
+    ){
+
+        elemento.style.transitionDelay =
+        (indice * 0.08) + "s";
+
+    }
+
 
 
     osservatore.observe(elemento);
 
 
 });
+
 
 
 
@@ -148,12 +169,15 @@ if(heroImage){
 
 
 
+
+
 /* ==========================
    ANIMAZIONE ICONE
 ========================== */
 
 
 const icone = document.querySelectorAll(".icon");
+
 
 
 icone.forEach(function(icona){
@@ -178,7 +202,11 @@ icone.forEach(function(icona){
     });
 
 
+
 });
+
+
+
 
 
 
@@ -193,26 +221,28 @@ icone.forEach(function(icona){
 const gallerie = document.querySelectorAll(".portfolio");
 
 
+
 gallerie.forEach(function(gallery){
 
 
-    const contenitoreDots = gallery.parentElement.querySelector(".mobile-dots");
+    const contenitoreDots =
+    gallery.parentElement.querySelector(".mobile-dots");
+
 
 
     if(!contenitoreDots) return;
 
 
 
-    const immagini = gallery.querySelectorAll("img");
+    const immagini =
+    gallery.querySelectorAll("img");
 
 
-
-    // crea automaticamente un pallino per ogni immagine
 
     immagini.forEach(function(){
 
 
-        const dot = document.createElement("span");
+        const dot=document.createElement("span");
 
         contenitoreDots.appendChild(dot);
 
@@ -221,11 +251,11 @@ gallerie.forEach(function(gallery){
 
 
 
-    const dots = contenitoreDots.querySelectorAll("span");
+
+    const dots =
+    contenitoreDots.querySelectorAll("span");
 
 
-
-    // primo pallino attivo
 
     if(dots[0]){
 
@@ -235,22 +265,29 @@ gallerie.forEach(function(gallery){
 
 
 
+
+
+
     gallery.addEventListener("scroll", function(){
 
 
 
-        let immagine = gallery.querySelector("img");
-
-
-        if(!immagine) return;
-
-
-
-        let distanza = immagine.offsetWidth + 20;
+        let primaImmagine =
+        gallery.querySelector("img");
 
 
 
-        let indice = Math.round(
+        if(!primaImmagine) return;
+
+
+
+        let distanza =
+        primaImmagine.offsetWidth + 20;
+
+
+
+        let indice =
+        Math.round(
             gallery.scrollLeft / distanza
         );
 
@@ -258,7 +295,7 @@ gallerie.forEach(function(gallery){
 
         if(indice >= dots.length){
 
-            indice = dots.length - 1;
+            indice=dots.length-1;
 
         }
 
@@ -266,9 +303,7 @@ gallerie.forEach(function(gallery){
 
         dots.forEach(function(dot){
 
-
             dot.classList.remove("active");
-
 
         });
 
@@ -276,9 +311,7 @@ gallerie.forEach(function(gallery){
 
         if(dots[indice]){
 
-
             dots[indice].classList.add("active");
-
 
         }
 
@@ -289,6 +322,9 @@ gallerie.forEach(function(gallery){
 
 
 });
+
+
+
 
 
 });
