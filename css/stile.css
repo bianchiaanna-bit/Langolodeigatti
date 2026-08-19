@@ -1048,12 +1048,13 @@ footer p {
 
 .story-image img {
 
-    max-height:280px;
+    width:100%;
+
+    height:260px;
 
     object-fit:cover;
 
 }
-
 
 
 .story-text {
