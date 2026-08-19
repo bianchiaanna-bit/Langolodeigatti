@@ -843,17 +843,23 @@ footer p {
 
 
 
-.story-image img {
 
-    width:100%;
 
-    max-width:450px;
+    .story-image img {
 
-    border-radius:25px;
+        width:100%;
 
-    transition:.45s ease;
+        height:260px;
 
-}
+        max-height:260px;
+
+        object-fit:cover;
+
+        border-radius:25px;
+
+    }
+
+
 
 
 
