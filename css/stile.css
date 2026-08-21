@@ -498,10 +498,9 @@ body {
 
     border-radius:22px;
 
-    transition:.45s;
+    transition:.45s ease;
 
 }
-
 
 
 .gallery img:hover {
@@ -509,6 +508,7 @@ body {
     transform:scale(1.04);
 
 }
+
 /* ==========================
    ABOUT
 ========================== */
@@ -788,15 +788,24 @@ footer p {
 
 
 
-.projects > .button {
+.projects-button {
 
-    display:inline-block;
+    display:flex;
 
-    margin-top:25px;
+    justify-content:center;
+
+    width:100%;
+
+    margin-top:35px;
 
 }
 
 
+.projects-button .button {
+
+    display:inline-block;
+
+}
 
 
 
@@ -849,9 +858,9 @@ footer p {
 
         width:100%;
 
-        height:260px;
+        height:900px;
 
-        max-height:260px;
+        max-height:600px;
 
         object-fit:cover;
 
@@ -906,8 +915,407 @@ footer p {
 }
 
 
+/* ==========================
+   HOME ABOUT STORY
+========================== */
 
 
+.home-about-story {
+
+    position:relative;
+
+    width:90%;
+
+    max-width:1400px;
+
+    height:650px;
+
+    margin:100px auto;
+
+    overflow:hidden;
+
+    border-radius:30px;
+
+}
+
+
+
+.home-about-story > img {
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center 60%;
+
+}
+
+
+
+.home-about-story::after {
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        rgba(0,0,0,0.15),
+        rgba(0,0,0,0.55)
+    );
+
+}
+
+
+
+.home-about-overlay {
+
+    position:absolute;
+
+    z-index:2;
+
+    left:8%;
+
+    bottom:10%;
+
+    max-width:600px;
+
+    color:white;
+
+    text-shadow:0 3px 15px rgba(0,0,0,0.45);
+     
+
+}
+
+
+
+.home-about-overlay .small-title {
+
+    color:white;
+
+}
+
+
+
+.home-about-overlay h2 {
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:55px;
+
+    line-height:1;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.home-about-overlay p:not(.small-title) {
+
+    font-size:17px;
+
+    line-height:1.7;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.home-about-overlay .button {
+
+    margin-top:20px;
+
+
+    background:#a77b4f;
+
+    border:none;
+
+    color:white;
+
+}
+
+
+.home-about-overlay .button:hover {
+
+    background:#80603e;
+
+}
+
+/* ==========================
+   PAGINA CHI SIAMO
+========================== */
+
+
+.about-hero {
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    padding:100px 8% 50px;
+
+    align-items:center;
+
+}
+
+
+
+.about-hero-image img {
+
+    width:100%;
+
+    height:600px;
+
+    object-fit:cover;
+
+    border-radius:30px;
+
+}
+
+
+
+.about-hero-text h1 {
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:60px;
+
+    line-height:1;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.about-hero-text p {
+
+    font-size:18px;
+
+    line-height:1.7;
+
+}
+
+
+
+
+.about-story {
+
+    max-width:850px;
+
+    margin:auto;
+
+    padding:45px 8% 70px;
+
+    text-align:center;
+
+}
+
+
+
+.about-story h2,
+.about-philosophy h2,
+.about-us h2,
+.about-cta h2 {
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:44px;
+
+    line-height:1.1;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.about-story p,
+.about-philosophy p,
+.about-us p {
+
+    margin-bottom:18px;
+
+    line-height:1.7;
+
+}
+
+
+
+.about-philosophy {
+
+    background:#eadcc9;
+
+    padding:90px 8%;
+
+    text-align:center;
+
+}
+
+
+
+.about-principle {
+
+    margin-top:80px;
+
+    padding:40px 20px;
+
+    text-align:center;
+
+}
+
+
+.about-principle p {
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:42px;
+
+    line-height:1.1;
+
+    color:#3b342d;
+
+}
+
+
+.about-principle span {
+
+    display:block;
+
+    margin-top:20px;
+
+    font-size:15px;
+
+    letter-spacing:1px;
+
+    color:#80603e;
+
+}
+
+
+.about-us {
+
+    max-width:850px;
+
+    margin:auto;
+
+    padding:80px 8%;
+
+    text-align:center;
+
+}
+
+
+
+.about-cta {
+
+    background:#eadcc9;
+
+    padding:100px 20px;
+
+    text-align:center;
+
+}
+
+/* ==========================
+   BOX ANYA E MIMÌ
+========================== */
+
+
+.cats-story {
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+    max-width:1000px;
+
+    margin:50px auto 0;
+
+}
+
+
+
+.cat-story-card {
+
+    background:#fffaf3;
+
+    border-radius:25px;
+
+    padding:55px 45px;
+
+    min-height:320px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(80,60,40,0.12);
+
+    transition:.35s ease;
+
+}
+
+
+.cat-story-card:hover {
+
+    transform:translateY(-6px);
+
+    box-shadow:0 20px 45px rgba(80,60,40,0.18);
+
+}
+
+
+.cat-story-card h3 {
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:42px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.cat-story-card h4 {
+
+    font-size:15px;
+
+    font-weight:500;
+
+    color:#80603e;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.cat-story-card p {
+
+    line-height:1.7;
+
+}
+
+.cat-story-card:nth-child(2) {
+
+    transition-delay:.15s;
+
+}
 
 /* ==========================
    MOBILE
@@ -1152,7 +1560,17 @@ footer p {
 }
 
 
+.mobile-hint {
 
+    display:block;
+
+    margin-top:15px;
+
+    font-size:14px;
+
+    opacity:.7;
+
+}
 
 
 .portfolio {
@@ -1280,6 +1698,188 @@ footer p {
 }
 
 
+.home-about-story {
+
+    grid-template-columns:1fr;
+
+    padding:50px 8%;
+
+    gap:35px;
+
+}
+
+
+
+.home-about-content {
+
+    text-align:center;
+
+}
+
+
+
+.home-about-content h2 {
+
+    font-size:36px;
+
+}
+
+
+.home-about-story {
+
+    width:84%;
+
+    height:auto;
+
+    margin:70px auto;
+
+    border-radius:25px;
+
+    overflow:visible;
+
+}
+
+
+
+.home-about-story > img {
+
+    height:210px;
+
+    border-radius:25px;
+
+    object-position:center 55%;
+
+}
+
+
+
+.home-about-story::after {
+
+    display:none;
+
+}
+
+
+
+.home-about-overlay {
+
+    position:relative;
+
+    left:auto;
+
+    bottom:auto;
+
+    color:#3b342d;
+
+    padding:35px 5px 0;
+
+    text-shadow:none;
+
+    text-align:center;
+
+}
+
+
+
+.home-about-overlay .small-title {
+
+    color:#80603e;
+
+}
+
+
+
+.home-about-overlay h2 {
+
+    font-size:36px;
+
+}
+
+
+
+.home-about-overlay p:not(.small-title) {
+
+    font-size:16px;
+
+}
+
+
+
+.home-about-overlay .button {
+
+    background:#a77b4f;
+
+    color:white;
+
+}
+
+.projects {
+    text-align:center;
+}
+
+
+.cats-story {
+
+    grid-template-columns:1fr;
+
+}
+
+
+.cat-story-card {
+
+    padding:35px 25px;
+
+    min-height:240px;
+
+}
+
+.about-hero {
+
+    grid-template-columns:1fr;
+
+    padding:50px 8%;
+
+}
+
+
+.about-hero-image img {
+
+    height:260px;
+
+}
+
+
+.about-hero-text {
+
+    text-align:center;
+
+}
+
+
+.about-hero-text h1 {
+
+    font-size:38px;
+
+}
+
+
+.about-story,
+.about-philosophy,
+.about-us {
+
+    padding:50px 8%;
+
+}
+
+
+.about-story h2,
+.about-philosophy h2,
+.about-us h2,
+.about-cta h2 {
+
+    font-size:36px;
+
+}
 
 }
 /* ==========================
@@ -1310,9 +1910,9 @@ footer p {
 
 .social-text {
 
-    font-family:'Lato',sans-serif;
+    font-family:'Cormorant Garamond',serif;
 
-    font-size:13px;
+    font-size:22px;
 
     font-weight:400;
 
@@ -1323,7 +1923,6 @@ footer p {
     line-height:1.4;
 
     color:#80603e;
-
 }
 
 

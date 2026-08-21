@@ -69,7 +69,7 @@ if(hamburger && menu){
 
 
 const elementiAnimati = document.querySelectorAll(
-".reveal, .value-section, .projects, .section-title, .story-text, .about-preview, .cta, .gallery img, .portfolio img"
+".reveal, .value-section, .projects, .section-title, .story-text, .home-about-story, .cta, .gallery img"
 );
 
 
@@ -85,8 +85,6 @@ const osservatore = new IntersectionObserver(function(entries){
 
             entry.target.classList.add("visible");
 
-
-            // evita controlli inutili
 
             osservatore.unobserve(entry.target);
 
@@ -108,27 +106,14 @@ const osservatore = new IntersectionObserver(function(entries){
 
 
 
-elementiAnimati.forEach(function(elemento, indice){
 
-
-    // ritardo leggero per immagini
-
-    if(
-        elemento.tagName === "IMG"
-    ){
-
-        elemento.style.transitionDelay =
-        (indice * 0.08) + "s";
-
-    }
-
+elementiAnimati.forEach(function(elemento){
 
 
     osservatore.observe(elemento);
 
 
 });
-
 
 
 
