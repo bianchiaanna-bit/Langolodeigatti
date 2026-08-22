@@ -311,7 +311,7 @@ body {
 
 .section {
 
-    padding:70px 8%;
+    padding:60px 8%;
 
 }
 
@@ -359,6 +359,7 @@ body {
 
     margin-top:60px;
 
+
 }
 
 
@@ -367,13 +368,15 @@ body {
 
     background:#fffaf3;
 
-    padding:40px 30px;
+    padding:40px 20px;
 
     border-radius:20px;
 
     text-align:center;
 
     transition:.4s;
+
+    box-shadow: 0 8px 24px rgba(59, 52, 45, 0.08);
 
 }
 
@@ -426,13 +429,14 @@ body {
 
 .value-section {
 
-    padding:45px 8% 35px;
+    padding:45px 8% 60px;
 
     text-align:center;
 
     max-width:900px;
 
     margin:auto;
+
 
 }
 
@@ -1317,6 +1321,336 @@ footer p {
 
 }
 
+
+/* ==========================
+   BLOG
+========================== */
+
+
+.blog-page {
+
+    padding:80px 8%;
+
+}
+
+
+
+.blog-grid {
+
+    display:grid;
+
+    grid-template-columns:repeat(2, 1fr);
+
+    gap:45px;
+
+    margin-top:60px;
+
+    max-width:1100px;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+}
+
+
+
+.blog-card {
+
+    background:#fffaf3;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 24px rgba(59,52,45,0.08);
+
+    transition:.35s ease;
+
+}
+
+
+
+.blog-card:hover {
+
+    transform:translateY(-8px);
+
+}
+
+
+
+.blog-card img {
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+}
+
+
+
+.blog-card-content {
+
+    padding:30px;
+
+}
+
+
+
+.blog-card h2 {
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:30px;
+
+    line-height:1.15;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.blog-card p {
+
+    font-size:16px;
+
+    line-height:1.7;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.blog-card a {
+
+    color:#80603e;
+
+    text-decoration:none;
+
+    font-weight:500;
+
+}
+
+
+/* ==========================
+   ARTICOLI BLOG
+========================== */
+
+
+.article-page {
+
+    padding:80px 8%;
+
+    color:#3b342d;
+
+}
+
+
+
+.article-header {
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+
+
+.article-header h1 {
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:52px;
+
+    font-weight:600;
+
+    line-height:1.1;
+
+    color:#3b342d;
+
+    margin-bottom:20px;
+    r
+
+}
+
+
+
+.article-meta {
+
+    font-size:14px;
+
+    color:#80603e;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.article-image {
+
+    width:100%;
+
+    max-height:520px;
+
+    object-fit:cover;
+
+    border-radius:30px;
+
+}
+
+.article-intro {
+
+    max-width:800px;
+
+    margin:40px auto 0;
+
+    padding:30px 35px;
+
+    background:#eadcc9;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(59,52,45,0.08);
+
+}
+
+
+.article-intro p {
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:24px;
+
+    line-height:1.5;
+
+    color:#3b342d;
+
+    margin:0;
+
+    text-align:center;
+
+}
+
+.article-content {
+
+    max-width:800px;
+
+    margin:70px auto 0;
+
+}
+
+
+
+.article-content p {
+
+font-size:17px;
+
+line-height:1.9;
+
+color:#3b342d;
+
+margin-bottom:28px;
+
+text-align:left;
+
+}
+
+
+
+.article-content h2 {
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:38px;
+
+    font-weight:600;
+
+    line-height:1.1;
+
+    margin-top:55px;
+
+    margin-bottom:20px;
+
+    color:#3b342d;
+
+    text-align:center;
+
+}
+
+
+
+/* ==========================
+   CTA INTERNA ARTICOLO
+========================== */
+
+
+.article-cta {
+
+    max-width:900px;
+
+    margin:80px auto;
+
+    padding:60px 8%;
+
+    background:#eadcc9;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    box-shadow:0 15px 40px rgba(59,52,45,0.12);
+
+}
+
+
+.article-cta h2 {
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:42px;
+
+    line-height:1.1;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.article-cta p {
+
+    font-size:17px;
+
+    line-height:1.7;
+
+    margin-bottom:30px;
+
+}
+
+/* ==========================
+   META ARTICOLO
+========================== */
+
+
+.article-meta {
+
+    font-size:14px;
+
+    color:#80603e;
+
+    margin-bottom:35px;
+
+    letter-spacing:.5px;
+
+}
 /* ==========================
    MOBILE
 ========================== */
@@ -1878,6 +2212,73 @@ footer p {
 .about-cta h2 {
 
     font-size:36px;
+
+}
+
+
+/* ARTICOLI BLOG MOBILE */
+
+.article-page {
+
+    padding:50px 8%;
+
+}
+
+
+.article-header h1 {
+
+    font-size:36px;
+
+}
+
+
+.article-content {
+
+    margin-top:40px;
+
+}
+
+
+.article-content h2 {
+
+    font-size:32px;
+
+}
+
+
+.article-cta {
+
+    margin:50px 8%;
+
+    padding:40px 25px;
+
+}
+
+
+.article-cta h2 {
+
+    font-size:34px;
+
+}
+
+.article-intro {
+
+    padding:25px 20px;
+
+}
+
+
+.article-intro p {
+
+    font-size:21px;
+
+}
+
+.blog-grid {
+
+    grid-template-columns:1fr;
+
+    gap:30px;
 
 }
 
