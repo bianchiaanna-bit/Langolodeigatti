@@ -774,7 +774,7 @@ footer p {
 
 .portfolio img:hover {
 
-    transform:scale(1.04);
+    transform:scale(1.02);
 
 }
 
@@ -1421,6 +1421,8 @@ footer p {
 
     margin-bottom:20px;
 
+    text-align:center;
+
 }
 
 
@@ -1639,6 +1641,14 @@ text-align:left;
     letter-spacing:.5px;
 
 }
+
+.article-content .article-cta p {
+
+    text-align:center;
+
+}
+
+
 /* ==========================
    MOBILE
 ========================== */
@@ -1725,7 +1735,11 @@ text-align:left;
 
 }
 
+.hero-details {
 
+    display:none;
+
+}
 
 
 
@@ -1903,17 +1917,19 @@ text-align:left;
 
     overflow-x:auto;
 
-    gap:20px;
+    gap:15px;
 
-    padding-left:8%;
+    padding-left:6%;
 
-    padding-right:8%;
+    padding-right:6%;
 
     padding-bottom:20px;
 
     scroll-snap-type:x mandatory;
 
     scrollbar-width:none;
+
+    touch-action: pan-x;
 
 }
 
@@ -1929,13 +1945,13 @@ text-align:left;
 
 .portfolio img {
 
-    flex:0 0 70%;
+    flex:0 0 92%;
 
-    width:70%;
+    width:92%;
 
-    max-width:70%;
+    max-width:92%;
 
-    aspect-ratio:1 / 1;
+    aspect-ratio:4 / 5;
 
     object-fit:cover;
 
