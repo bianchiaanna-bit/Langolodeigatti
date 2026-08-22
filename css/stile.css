@@ -421,7 +421,6 @@ body {
 }
 
 
-
 /* ==========================
    VALORE SU MISURA
 ========================== */
@@ -429,16 +428,18 @@ body {
 
 .value-section {
 
-    padding:45px 8% 60px;
+    background:#eadcc9;
 
     text-align:center;
 
-    max-width:900px;
+    max-width:none;
 
-    margin:auto;
+    padding:70px 8%;
 
+    margin:0 0 70px;
 
 }
+
 
 
 .value-section h2 {
@@ -451,7 +452,7 @@ body {
 
     line-height:1.1;
 
-    margin-bottom:25px;
+    margin-bottom:30px;
 
 }
 
@@ -459,15 +460,20 @@ body {
 
 .value-section p:not(.small-title) {
 
-    margin-bottom:18px;
+    max-width:750px;
 
-    line-height:1.7;
+    margin:0 auto 20px;
+
+    line-height:1.8;
 
 }
 
 
+
 .custom {
 
+    background:#fffaf3;
+    
     padding:80px 8% 60px;
 
 }
@@ -784,9 +790,7 @@ footer p {
 
     text-align:center;
 
-    padding-top:70px;
-
-    padding-bottom:70px;
+    padding:0 0 70px;
 
 }
 
@@ -864,7 +868,7 @@ footer p {
 
         height:900px;
 
-        max-height:600px;
+        max-height:650px;
 
         object-fit:cover;
 
@@ -1409,6 +1413,8 @@ footer p {
 
     margin-bottom:15px;
 
+    text-align:center;
+
 }
 
 
@@ -1434,6 +1440,17 @@ footer p {
     text-decoration:none;
 
     font-weight:500;
+
+    display:block;
+    
+    text-align:center;
+
+}
+
+
+.blog-card h3 {
+
+    text-align:center;
 
 }
 
@@ -1759,8 +1776,20 @@ text-align:left;
 }
 
 
+.hero-image {
+
+    height:100%;
+    top:0;
+    object-position:center center;
+
+}
 
 
+.hero-content {
+
+    max-width:85%;
+
+}
 
 .section {
 
@@ -1869,11 +1898,23 @@ text-align:left;
 
 .value-section {
 
-    padding:45px 8% 35px;
+    padding:50px 8%;
+
+    margin-bottom:50px;
 
 }
 
+.value-section {
 
+    width:100%;
+
+    padding:50px 8%;
+
+    margin-left:0;
+
+    margin-right:0;
+
+}
 
 .value-section h2 {
 
@@ -1889,9 +1930,7 @@ text-align:left;
 
     text-align:center;
 
-    padding-top:50px;
-
-    padding-bottom:35px;
+    padding:0 0 35px;
 
 }
 
