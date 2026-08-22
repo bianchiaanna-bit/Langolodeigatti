@@ -44,7 +44,7 @@ body {
     rgba(247,241,232,0.45),
     rgba(247,241,232,0.45)
     ),
-    url("../immagini/texture-legno-header.png");
+    url("../immagini/texture-legno-header.webp");
 
     background-size:cover;
     background-position:center;
@@ -772,6 +772,10 @@ footer p {
 
     width:100%;
 
+    max-width:100%;
+
+    height:auto;
+
     aspect-ratio:1 / 1;
 
     object-fit:cover;
@@ -781,7 +785,6 @@ footer p {
     transition:.45s ease;
 
 }
-
 
 
 .portfolio img:hover {
