@@ -6,57 +6,69 @@ document.addEventListener("DOMContentLoaded", function(){
    MENU MOBILE
 ========================== */
 
-
 const hamburger = document.querySelector(".hamburger");
 const menu = document.querySelector(".menu");
 
-
 if(hamburger && menu){
-
 
     hamburger.addEventListener("click", function(){
 
-
         menu.classList.toggle("active");
 
+        const menuAperto = menu.classList.contains("active");
 
-        if(menu.classList.contains("active")){
+        hamburger.setAttribute(
+            "aria-expanded",
+            menuAperto ? "true" : "false"
+        );
 
-            hamburger.innerHTML="×";
+        hamburger.setAttribute(
+            "aria-label",
+            menuAperto ? "Chiudi il menu" : "Apri il menu"
+        );
 
-        } else {
-
-            hamburger.innerHTML="☰";
-
-        }
-
+        hamburger.innerHTML = menuAperto ? "×" : "☰";
 
     });
 
 
-
     const linkMenu = document.querySelectorAll(".menu a");
-
 
     linkMenu.forEach(function(link){
 
-
         link.addEventListener("click", function(){
-
 
             menu.classList.remove("active");
 
-            hamburger.innerHTML="☰";
+            hamburger.setAttribute("aria-expanded", "false");
 
+            hamburger.setAttribute("aria-label", "Apri il menu");
+
+            hamburger.innerHTML = "☰";
 
         });
 
+    });
+    document.addEventListener("keydown", function(event){
+
+        if(event.key === "Escape" && menu.classList.contains("active")){
+
+            menu.classList.remove("active");
+
+            hamburger.setAttribute("aria-expanded", "false");
+
+            hamburger.setAttribute("aria-label", "Apri il menu");
+
+            hamburger.innerHTML = "☰";
+
+            hamburger.focus();
+
+        }
 
     });
 
 
 }
-
 
 
 
@@ -102,9 +114,6 @@ const osservatore = new IntersectionObserver(function(entries){
 
 
 });
-
-
-
 
 
 elementiAnimati.forEach(function(elemento){

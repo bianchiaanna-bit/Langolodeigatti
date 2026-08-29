@@ -96,11 +96,13 @@ body {
 
 
 .hamburger {
-
-    display:none;
-    font-size:34px;
-    cursor:pointer;
-
+    display: none;
+    font-size: 34px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 5px;
+    color: #3b342d;
 }
 
 
@@ -2578,4 +2580,15 @@ text-align:left;
 }
 
 
+}
+
+/* ==========================
+FOCUS DA TASTIERA
+========================== */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #a77b4f;
+    outline-offset: 5px;
+    border-radius: 6px;
 }
