@@ -1843,3 +1843,242 @@ button:focus-visible {
     }
 
 }
+
+/* ================================
+   PRIVACY POLICY
+   ================================ */
+
+.privacy-content {
+    max-width: 900px;
+    margin: 50px auto 80px;
+    padding: 0 25px;
+    text-align: left;
+}
+
+.privacy-content h2 {
+    margin-top: 45px;
+    margin-bottom: 18px;
+}
+
+.privacy-content h3 {
+    margin-top: 30px;
+    margin-bottom: 12px;
+}
+
+.privacy-content p {
+    margin-bottom: 18px;
+    line-height: 1.8;
+}
+
+.privacy-content ul {
+    margin: 15px 0 25px 25px;
+    padding-left: 20px;
+}
+
+.privacy-content li {
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+.privacy-content a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.privacy-content a:hover {
+    opacity: 0.7;
+}
+
+/* Link Privacy Policy nel footer */
+
+.privacy-link {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 11px;
+    color: #80603e;
+    text-decoration: none;
+    opacity: 0.75;
+    transition: opacity 0.3s ease;
+}
+
+.privacy-link:hover {
+    color: #80603e;
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* ================================
+   COOKIE BANNER
+   ================================ */
+
+.cookie-banner {
+    position: fixed;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    max-width: 900px;
+    margin: auto;
+
+    padding: 20px 25px;
+
+    background: #f7f1e8;
+
+    border: 1px solid rgba(167, 123, 79, 0.35);
+    border-radius: 12px;
+
+    box-shadow: 0 8px 30px rgba(59, 52, 45, 0.18);
+
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+
+.cookie-banner p {
+    margin: 0;
+
+    font-size: 13px;
+    line-height: 1.6;
+
+    color: #3b342d;
+}
+
+
+.cookie-banner a {
+    color: #80603e;
+
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+
+.cookie-buttons {
+    display: flex;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+
+.cookie-buttons button {
+    border: 1px solid #80603e;
+    border-radius: 6px;
+
+    padding: 9px 18px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+#cookie-accept {
+    background: #80603e;
+    color: #ffffff;
+}
+
+
+#cookie-accept:hover {
+    background: #a77b4f;
+}
+
+
+#cookie-reject {
+    background: transparent;
+    color: #80603e;
+}
+
+
+#cookie-reject:hover {
+    background: rgba(128, 96, 62, 0.08);
+}
+
+
+.cookie-buttons button:focus-visible {
+    outline: 3px solid #a77b4f;
+    outline-offset: 3px;
+}
+
+
+/* ================================
+   COOKIE BANNER - SMARTPHONE
+   ================================ */
+
+@media (max-width: 700px) {
+
+    .cookie-banner {
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+
+        padding: 18px;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 15px;
+    }
+
+
+    .cookie-banner p {
+        font-size: 12px;
+    }
+
+
+    .cookie-buttons {
+        justify-content: flex-end;
+    }
+
+
+    .cookie-buttons button {
+        flex: 1;
+    }
+
+}
+
+/* ================================
+   GESTISCI COOKIE
+   ================================ */
+
+.cookie-settings {
+    margin-top: 4px;
+
+    padding: 0;
+
+    border: none;
+    background: transparent;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+
+    color: #80603e;
+
+    text-decoration: none;
+
+    opacity: 0.75;
+
+    cursor: pointer;
+
+    transition: opacity 0.3s ease;
+}
+
+.cookie-settings:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.cookie-settings:focus-visible {
+    outline: 3px solid #a77b4f;
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+

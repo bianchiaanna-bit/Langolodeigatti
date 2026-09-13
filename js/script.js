@@ -322,3 +322,227 @@ gallerie.forEach(function(gallery){
 
 
 });
+
+
+/* ================================
+   COOKIE CONSENT + GOOGLE ANALYTICS
+   CONSENT MODE V2
+   ================================ */
+
+const cookieBanner = document.getElementById("cookie-banner");
+const cookieAccept = document.getElementById("cookie-accept");
+const cookieReject = document.getElementById("cookie-reject");
+const cookieSettings = document.getElementById("cookie-settings");
+
+const GA_MEASUREMENT_ID = "G-9RL148YMGT";
+
+
+/* =================================
+   GOOGLE ANALYTICS
+   ================================= */
+
+function loadGoogleAnalytics() {
+
+    if (document.getElementById("google-analytics-script")) {
+        return;
+    }
+
+    window.dataLayer = window.dataLayer || [];
+
+    window.gtag = window.gtag || function () {
+        window.dataLayer.push(arguments);
+    };
+
+
+    /*
+       CONSENT MODE V2
+
+       Prima di qualsiasi misurazione
+       impostiamo tutti i consensi su "denied".
+    */
+
+    window.gtag("consent", "default", {
+
+        analytics_storage: "denied",
+
+        ad_storage: "denied",
+
+        ad_user_data: "denied",
+
+        ad_personalization: "denied"
+
+    });
+
+
+    /*
+       Inizializzazione Google Analytics
+    */
+
+    window.gtag("js", new Date());
+
+    window.gtag("config", GA_MEASUREMENT_ID);
+
+
+    /*
+       Carica Google Analytics
+    */
+
+    const script = document.createElement("script");
+
+    script.id = "google-analytics-script";
+
+    script.async = true;
+
+    script.src =
+        "https://www.googletagmanager.com/gtag/js?id="
+        + GA_MEASUREMENT_ID;
+
+    document.head.appendChild(script);
+}
+
+
+/* =================================
+   CONSENSO GOOGLE ANALYTICS
+   ================================= */
+
+function grantAnalyticsConsent() {
+
+    window.dataLayer = window.dataLayer || [];
+
+    window.gtag = window.gtag || function () {
+        window.dataLayer.push(arguments);
+    };
+
+
+    window.gtag("consent", "update", {
+
+        analytics_storage: "granted",
+
+        ad_storage: "denied",
+
+        ad_user_data: "denied",
+
+        ad_personalization: "denied"
+
+    });
+}
+
+
+/* =================================
+   NASCONDE IL BANNER
+   ================================= */
+
+function hideCookieBanner() {
+
+    if (cookieBanner) {
+
+        cookieBanner.style.display = "none";
+
+    }
+}
+
+
+/* =================================
+   CONTROLLO DELLA SCELTA PRECEDENTE
+   ================================= */
+
+const cookieConsent = localStorage.getItem("cookieConsent");
+
+
+if (cookieConsent === "accepted") {
+
+    loadGoogleAnalytics();
+
+    grantAnalyticsConsent();
+
+    hideCookieBanner();
+
+}
+
+
+else if (cookieConsent === "rejected") {
+
+    hideCookieBanner();
+
+}
+
+
+/* =================================
+   PULSANTE ACCETTA
+   ================================= */
+
+if (cookieAccept) {
+
+    cookieAccept.addEventListener("click", function () {
+
+        localStorage.setItem(
+            "cookieConsent",
+            "accepted"
+        );
+
+
+        loadGoogleAnalytics();
+
+        grantAnalyticsConsent();
+
+        hideCookieBanner();
+
+    });
+
+}
+
+/* =================================
+PULSANTE RIFIUTA
+================================= */
+
+if (cookieReject) {
+
+    cookieReject.addEventListener("click", function () {
+
+        localStorage.setItem(
+            "cookieConsent",
+            "rejected"
+        );
+
+
+        if (window.gtag) {
+
+            window.gtag("consent", "update", {
+
+                analytics_storage: "denied",
+
+                ad_storage: "denied",
+
+                ad_user_data: "denied",
+
+                ad_personalization: "denied"
+
+            });
+
+        }
+
+
+        hideCookieBanner();
+
+    });
+
+}
+
+
+/* =================================
+GESTISCI COOKIE
+================================= */
+
+if (cookieSettings) {
+
+    cookieSettings.addEventListener("click", function () {
+
+        if (cookieBanner) {
+
+            cookieBanner.style.display = "flex";
+
+        }
+
+    });
+
+}
