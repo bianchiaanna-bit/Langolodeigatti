@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+
+    <channel>
+
+        <title>L'Angolo dei Gatti</title>
+
+        <link>https://langolodeigatti.it/</link>
+
+        <description>
+            Pensieri, consigli e idee per vivere meglio insieme.
+        </description>
+
+        <language>it-IT</language>
+
+        <lastBuildDate>Tue, 22 Sep 2026 18:00:00 +0200</lastBuildDate>
+
+
+        <item>
+
+            <title>
+                Percorsi per gatti in casa: come crearli senza trasformare tutto in un parco giochi
+            </title>
+
+            <link>
+                https://langolodeigatti.it/articolo-percorso-gatto.html
+            </link>
+
+            <guid isPermaLink="true">
+                https://langolodeigatti.it/articolo-percorso-gatto.html
+            </guid>
+
+            <pubDate>Tue, 22 Sep 2026 18:00:00 +0200</pubDate>
+
+            <description><![CDATA[
+                Come creare un percorso per gatti in casa sfruttando lo spazio verticale. Idee e consigli per collegare mensole, punti di riposo e zone di osservazione in modo sicuro.
+            ]]></description>
+
+        </item>
+
+    </channel>
+
+</rss>
