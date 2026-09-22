@@ -1294,6 +1294,323 @@ footer p {
 }
 
 
+
+/* =========================================================
+   QUESTIONARIO / MODULO CONTATTI
+   ========================================================= */
+
+.questionnaire-section {
+    background: #f7f1e8;
+}
+
+.questionnaire-section .section-title {
+    max-width: 720px;
+    margin: 0 auto 44px;
+    text-align: center;
+}
+
+.questionnaire-section .section-title .small-title {
+    margin-bottom: 14px;
+}
+
+.questionnaire-section .section-title h2 {
+    margin-bottom: 16px;
+}
+
+.questionnaire-section .section-title p:last-child {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+/* Contenitore */
+
+.questionnaire-wrapper {
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+
+/* Form */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Righe con due domande */
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    margin-bottom: 42px;
+}
+
+
+/* Singola domanda */
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+
+/* Spazio tra i blocchi a tutta larghezza */
+
+.form-field-full {
+    margin-bottom: 42px;
+}
+
+
+/* Etichette */
+
+.form-field label {
+    display: block;
+    margin: 0 0 12px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.45;
+
+    color: #403b37;
+}
+
+
+/* Campi */
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form select,
+.contact-form textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 15px 17px;
+
+    border: 1px solid #d8cec3;
+    border-radius: 6px;
+
+    background: #f1ebe3;
+    color: #403b37;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* Placeholder */
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #9f968d;
+}
+
+
+/* Select */
+
+.contact-form select {
+    cursor: pointer;
+}
+
+
+/* Focus */
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+
+    border-color: #b87567;
+    background: #faf7f3;
+
+    box-shadow: 0 0 0 3px rgba(184, 117, 103, 0.08);
+}
+
+
+/* Textarea */
+
+.contact-form textarea {
+    min-height: 140px;
+    resize: vertical;
+    line-height: 1.65;
+}
+
+
+/* Privacy */
+
+.privacy-consent {
+    display: flex !important;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin: 0 0 0 !important;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    line-height: 1.55;
+
+    color: #817a73;
+}
+
+.privacy-consent input[type="checkbox"] {
+    width: auto;
+    margin: 4px 0 0;
+
+    flex-shrink: 0;
+}
+
+.privacy-consent a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+
+/* Pulsante */
+
+.contact-form .button {
+    align-self: center;
+
+    margin-top: 32px;
+
+    padding: 13px 30px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* Pulsante durante l'invio */
+
+.contact-form .button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+
+/* Messaggio di risultato */
+
+.form-result {
+    min-height: 20px;
+
+    margin-top: 16px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+
+    text-align: center;
+}
+
+.form-result.success {
+    color: #55745d;
+}
+
+.form-result.error {
+    color: #a05252;
+}
+
+
+/* Campo anti-spam */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .questionnaire-section .section-title {
+        margin-bottom: 36px;
+    }
+
+
+    /* Le due colonne diventano una */
+
+    .form-row {
+        display: flex;
+        flex-direction: column;
+
+        gap: 30px;
+
+        margin-bottom: 36px;
+    }
+
+
+    /* Spazi dei blocchi */
+
+    .form-field-full {
+        margin-bottom: 36px;
+    }
+
+
+    /* Etichette */
+
+    .form-field label {
+        margin-bottom: 10px;
+
+        font-size: 15px;
+    }
+
+
+    /* Campi */
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form select,
+    .contact-form textarea {
+        padding: 14px 15px;
+
+        font-size: 13px;
+    }
+
+
+    /* Testo */
+
+    .contact-form textarea {
+        min-height: 125px;
+    }
+
+
+    /* Privacy */
+
+    .privacy-consent {
+        font-size: 11px !important;
+    }
+
+
+    /* Pulsante */
+
+    .contact-form .button {
+        margin-top: 28px;
+
+        padding: 13px 28px;
+
+        font-size: 13px;
+    }
+}
+
+
+
 /* =========================================================
    SOCIAL FOOTER
    ========================================================= */
@@ -1379,6 +1696,8 @@ button:focus-visible {
     outline-offset: 4px;
     border-radius: 6px;
 }
+
+
 
 
 /* =========================================================
